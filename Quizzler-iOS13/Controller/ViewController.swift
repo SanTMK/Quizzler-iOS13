@@ -8,7 +8,8 @@
 //  Edited by Santiago Hernandez on Mar. 9, 2022
 
 // Enhancements:
-// #1
+// #1 Added two screens: one for completion of the game with a perfect score, and a second one that displays the reason why an answer is wrong
+// #2 Added a time limit progress bar set to give the player a 10 second limit to answer or their attempt will be counted as wrong
 
 
 import UIKit
@@ -30,7 +31,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var Falsebutton: UIButton!
     
     @IBOutlet weak var ProgressBar: UIProgressView!
-    
+
+    //Variables for time limit bar
     var timeRemaining = 10
     var timer: Timer!
     
@@ -44,8 +46,9 @@ class ViewController: UIViewController {
 
     @IBAction func BtnPressed(_ sender: UIButton) {
         
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, #selector(step), userInfo: nil, repeats: true)
+//        <-----Enhancement#2----->
+//        second prograss bar, this one determines the time remaining before answer is counted as wrong. See step() below for more details.
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(step), userInfo: nil, repeats: true)
         
         
         
@@ -78,6 +81,7 @@ class ViewController: UIViewController {
         }
     
         brain.nextQuestion()
+        ProgressBar.progress = brain.getProgress()
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         
@@ -86,20 +90,37 @@ class ViewController: UIViewController {
     
     @objc func updateUI() {
             QuestionText.text = brain.getQuestion()
-            ProgressBar.progress = brain.getProgress()
+            
             ScoreLabel.text = "Score: \(brain.score)"
             
             TrueButton.backgroundColor = UIColor.clear
             Falsebutton.backgroundColor = UIColor.clear
     }
-    
+    // Updates seconds remaining, progress bar and launches correction screen if time reaches zero
     @objc func step() {
         if timeRemaining > 0 {
             timeRemaining -= 1
         } else {
             timer.invalidate()
             timeRemaining = 10
+            
+            //Show Correction screen (copy-pasted from above)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "CorrectionVC") as! CorrectionViewController
+            
+            correctionString = brain.questions[brain.turn].reasoning
+            
+            present(vc, animated: true)
+            
+            brain.nextQuestion()
+            ProgressBar.progress = brain.getProgress()
+            
+            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            
+            
         }
+        // update bar
+        
+        TimeRemainingProgressBar.progress = Float(timeRemaining) / Float(10)
         
     }
     

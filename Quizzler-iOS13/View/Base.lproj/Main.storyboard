@@ -106,7 +106,7 @@
                         <outlet property="ProgressBar" destination="TXm-qh-7Xg" id="2Jx-38-eT3"/>
                         <outlet property="QuestionText" destination="rSI-li-mhO" id="iST-hX-Cuh"/>
                         <outlet property="ScoreLabel" destination="a1b-9j-KFT" id="YwK-hv-gfh"/>
-                        <outlet property="TimeRemainingProgressBar" destination="TXm-qh-7Xg" id="Xlt-Gq-svC"/>
+                        <outlet property="TimeRemainingProgressBar" destination="nH6-Et-vuF" id="xYl-Cx-2lk"/>
                         <outlet property="TrueButton" destination="oVw-Hl-IRe" id="M5A-Nc-If4"/>
                         <segue destination="Vbp-gr-ds4" kind="presentation" id="7L1-H7-FEF"/>
                     </connections>
