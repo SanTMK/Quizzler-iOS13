@@ -30,7 +30,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ProgressBar: UIProgressView!
     
-    
+    var timeRemaining = 10
+    var timer: Timer!
     
     public var brain = Brain()
     
@@ -41,6 +42,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func BtnPressed(_ sender: UIButton) {
+        
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, #selector(step), userInfo: nil, repeats: true)
+        
+        
+        
+        
     
         if brain.isCorrect(usrAns: sender.currentTitle!) {
             sender.backgroundColor = UIColor.green
@@ -84,5 +92,15 @@ class ViewController: UIViewController {
             Falsebutton.backgroundColor = UIColor.clear
     }
     
-
+    @objc func step() {
+        if timeRemaining > 0 {
+            timeRemaining -= 1
+        } else {
+            timer.invalidate()
+            timeRemaining = 10
+        }
+    }
+    
+    
+    
 }
