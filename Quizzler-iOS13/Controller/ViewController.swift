@@ -7,10 +7,14 @@
 //
 //  Edited by Santiago Hernandez on Mar. 9, 2022
 
+// Enhancements:
+// #1
+
 
 import UIKit
 
-public var correctionString: String = ""
+// correctionString must be on global environment to be accessible form CorrectionViewController
+var correctionString: String = ""
 
 class ViewController: UIViewController {
     
@@ -43,6 +47,11 @@ class ViewController: UIViewController {
         } else {
             sender.backgroundColor = UIColor.red
             
+//        <-----Enhancement #1----->
+//        Added new screen and sound effects if player gets all answers correct
+//        more on Brain.questions[].r struct and ../Model/VictoryScreenController.swift
+            
+//            Incorrect answer brings up reasoning screen
             let vc = storyboard?.instantiateViewController(withIdentifier: "CorrectionVC") as! CorrectionViewController
             
             correctionString = brain.questions[brain.turn].reasoning
@@ -50,10 +59,10 @@ class ViewController: UIViewController {
             present(vc, animated: true)
         }
         
-//        <-----Enhancement #1----->
-//        Added new screen and sound effects if player gets all answers correct
-//        more on ../Model/VictoryScreenController.swift
+//        Check for perfect score
         if brain.score == brain.questions.count {
+            
+//            call VictoryScreenController
             let vc = storyboard?.instantiateViewController(withIdentifier: "victoryVC") as! VictoryScreenController
             
             present(vc, animated: true)

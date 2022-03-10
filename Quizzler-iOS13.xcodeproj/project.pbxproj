@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7893206327D97BB100B42CA2 /* CorrectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7893206227D97BB100B42CA2 /* CorrectionViewController.swift */; };
+		7893206527D988A900B42CA2 /* onepiece_doflamingo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7893206427D988A800B42CA2 /* onepiece_doflamingo.png */; };
 		78A8146A27D926FE00128753 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8146927D926FE00128753 /* Brain.swift */; };
 		78A8146F27D9276400128753 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8146E27D9276400128753 /* Questions.swift */; };
 		78A8147127D9349600128753 /* VictoryScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8147027D9349600128753 /* VictoryScreenController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		7893206227D97BB100B42CA2 /* CorrectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionViewController.swift; sourceTree = "<group>"; };
+		7893206427D988A800B42CA2 /* onepiece_doflamingo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onepiece_doflamingo.png; sourceTree = "<group>"; };
 		78A8146927D926FE00128753 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		78A8146E27D9276400128753 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		78A8147027D9349600128753 /* VictoryScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VictoryScreenController.swift; path = "Quizzler-iOS13/Controller/VictoryScreenController.swift"; sourceTree = SOURCE_ROOT; };
@@ -100,6 +102,7 @@
 				78A8146B27D9270800128753 /* Model */,
 				AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */,
 				AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */,
+				7893206427D988A800B42CA2 /* onepiece_doflamingo.png */,
 				AD4BDE5222D878BC005BA4CC /* Assets.xcassets */,
 				AD4BDE5722D878BC005BA4CC /* Info.plist */,
 			);
@@ -166,6 +169,7 @@
 			files = (
 				AD4BDE5622D878BC005BA4CC /* LaunchScreen.storyboard in Resources */,
 				AD4BDE5322D878BC005BA4CC /* Assets.xcassets in Resources */,
+				7893206527D988A900B42CA2 /* onepiece_doflamingo.png in Resources */,
 				AD7631B622F9851900C6E71B /* README.md in Resources */,
 				AD4BDE5122D878BA005BA4CC /* Main.storyboard in Resources */,
 			);

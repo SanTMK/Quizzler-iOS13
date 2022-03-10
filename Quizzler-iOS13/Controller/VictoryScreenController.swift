@@ -10,9 +10,13 @@ import UIKit
 
 class VictoryScreenController: UIViewController {
     
+    @IBOutlet weak var DanceImage: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
-    
+
 }
