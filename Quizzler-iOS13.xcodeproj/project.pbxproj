@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7893206327D97BB100B42CA2 /* CorrectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7893206227D97BB100B42CA2 /* CorrectionViewController.swift */; };
 		78A8146A27D926FE00128753 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8146927D926FE00128753 /* Brain.swift */; };
 		78A8146F27D9276400128753 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8146E27D9276400128753 /* Questions.swift */; };
 		78A8147127D9349600128753 /* VictoryScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8147027D9349600128753 /* VictoryScreenController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7893206227D97BB100B42CA2 /* CorrectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionViewController.swift; sourceTree = "<group>"; };
 		78A8146927D926FE00128753 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		78A8146E27D9276400128753 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		78A8147027D9349600128753 /* VictoryScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VictoryScreenController.swift; path = "Quizzler-iOS13/Controller/VictoryScreenController.swift"; sourceTree = SOURCE_ROOT; };
@@ -49,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				78A8146927D926FE00128753 /* Brain.swift */,
-				78A8147027D9349600128753 /* VictoryScreenController.swift */,
 				78A8146E27D9276400128753 /* Questions.swift */,
 			);
 			path = Model;
@@ -68,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				AD4BDE4D22D878BA005BA4CC /* ViewController.swift */,
+				78A8147027D9349600128753 /* VictoryScreenController.swift */,
+				7893206227D97BB100B42CA2 /* CorrectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7893206327D97BB100B42CA2 /* CorrectionViewController.swift in Sources */,
 				78A8147127D9349600128753 /* VictoryScreenController.swift in Sources */,
 				AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */,
 				AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */,

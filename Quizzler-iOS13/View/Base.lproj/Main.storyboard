@@ -97,7 +97,7 @@
                         <outlet property="QuestionText" destination="rSI-li-mhO" id="iST-hX-Cuh"/>
                         <outlet property="ScoreLabel" destination="a1b-9j-KFT" id="YwK-hv-gfh"/>
                         <outlet property="TrueButton" destination="oVw-Hl-IRe" id="M5A-Nc-If4"/>
-                        <segue destination="Vbp-gr-ds4" kind="show" id="7L1-H7-FEF"/>
+                        <segue destination="Vbp-gr-ds4" kind="presentation" id="7L1-H7-FEF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,7 +109,7 @@
             <objects>
                 <viewController storyboardIdentifier="victoryVC" title="Victory" id="Vbp-gr-ds4" customClass="VictoryScreenController" customModule="Quizzler_iOS13" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0nf-Uh-gn0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfect Score!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6B-a3-DAC">
@@ -146,6 +146,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0n0-LR-ssf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="135.26785714285714"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="jYA-Ab-3IB">
+            <objects>
+                <viewController storyboardIdentifier="CorrectionVC" title="Home" id="AzO-on-zLt" customClass="CorrectionViewController" customModule="Quizzler_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GDn-bn-pX4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Correction Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLH-LM-adf">
+                                <rect key="frame" x="20" y="173" width="374" height="496"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrong!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-Gx-LdV">
+                                <rect key="frame" x="59" y="71" width="296" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I6Z-zn-xdv"/>
+                        <color key="backgroundColor" red="0.74901960784313726" green="0.30588235294117649" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GLH-LM-adf" firstAttribute="leading" secondItem="I6Z-zn-xdv" secondAttribute="leading" constant="20" id="0de-7a-wTx"/>
+                            <constraint firstItem="GLH-LM-adf" firstAttribute="centerX" secondItem="GDn-bn-pX4" secondAttribute="centerX" id="6KQ-UC-snh"/>
+                            <constraint firstItem="GLH-LM-adf" firstAttribute="top" secondItem="I6Z-zn-xdv" secondAttribute="top" constant="129" id="8Oe-Nt-CEZ"/>
+                            <constraint firstItem="I6Z-zn-xdv" firstAttribute="trailing" secondItem="GLH-LM-adf" secondAttribute="trailing" constant="20" id="Rzy-6E-5r6"/>
+                            <constraint firstItem="I6Z-zn-xdv" firstAttribute="bottom" secondItem="GLH-LM-adf" secondAttribute="bottom" constant="193" id="myC-Uf-1JF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CorrectionText" destination="GLH-LM-adf" id="0Ko-aM-qn5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOR-YB-99e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="857.8125"/>
         </scene>
     </scenes>
     <resources>

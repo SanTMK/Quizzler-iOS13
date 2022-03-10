@@ -12,10 +12,12 @@ struct Question {
     
     let quiz: String
     let answer: String
+    let reasoning: String
     
-    init(q: String, a: String) {
+    init(q: String, a: String, r: String) {
         quiz = q
         answer = a
+        reasoning = r
     }
     
 }

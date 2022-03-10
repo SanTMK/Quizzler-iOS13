@@ -10,6 +10,8 @@
 
 import UIKit
 
+public var correctionString: String = ""
+
 class ViewController: UIViewController {
     
     
@@ -24,7 +26,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ProgressBar: UIProgressView!
     
-    var brain = Brain()
+    
+    
+    public var brain = Brain()
     
     
     override func viewDidLoad() {
@@ -38,6 +42,12 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.green
         } else {
             sender.backgroundColor = UIColor.red
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "CorrectionVC") as! CorrectionViewController
+            
+            correctionString = brain.questions[brain.turn].reasoning
+            
+            present(vc, animated: true)
         }
         
 //        <-----Enhancement #1----->
@@ -52,6 +62,8 @@ class ViewController: UIViewController {
         brain.nextQuestion()
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
+
     }
     
     @objc func updateUI() {
@@ -61,7 +73,7 @@ class ViewController: UIViewController {
             
             TrueButton.backgroundColor = UIColor.clear
             Falsebutton.backgroundColor = UIColor.clear
-
     }
+    
 
 }
