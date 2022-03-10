@@ -26,13 +26,23 @@
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-9j-KFT" userLabel="ScoreLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="nH6-Et-vuF">
+                                        <rect key="frame" x="0.0" y="74.5" width="374" height="11"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="CVO-f5-efV"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.74901960784313726" green="0.30588235294117649" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                        <rect key="frame" x="0.0" y="78" width="374" height="496"/>
+                                        <rect key="frame" x="0.0" y="94.5" width="374" height="479.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -96,6 +106,7 @@
                         <outlet property="ProgressBar" destination="TXm-qh-7Xg" id="2Jx-38-eT3"/>
                         <outlet property="QuestionText" destination="rSI-li-mhO" id="iST-hX-Cuh"/>
                         <outlet property="ScoreLabel" destination="a1b-9j-KFT" id="YwK-hv-gfh"/>
+                        <outlet property="TimeRemainingProgressBar" destination="TXm-qh-7Xg" id="Xlt-Gq-svC"/>
                         <outlet property="TrueButton" destination="oVw-Hl-IRe" id="M5A-Nc-If4"/>
                         <segue destination="Vbp-gr-ds4" kind="presentation" id="7L1-H7-FEF"/>
                     </connections>

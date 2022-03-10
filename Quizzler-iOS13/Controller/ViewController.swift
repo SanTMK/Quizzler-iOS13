@@ -19,6 +19,7 @@ var correctionString: String = ""
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var TimeRemainingProgressBar: UIProgressView!
     
     @IBOutlet weak var ScoreLabel: UILabel!
     
@@ -99,6 +100,7 @@ class ViewController: UIViewController {
             timer.invalidate()
             timeRemaining = 10
         }
+        
     }
     
     
