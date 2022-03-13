@@ -208,6 +208,46 @@
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="857.8125"/>
         </scene>
+        <!--Time's Up-->
+        <scene sceneID="DHB-9Z-2Wu">
+            <objects>
+                <viewController storyboardIdentifier="TimessUpVC" title="Time's Up" id="vFB-FV-Y8a" customClass="TimesUpViewController" customModule="Quizzler_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2U-3u-9XG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Better luck next time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-P4-cWS">
+                                <rect key="frame" x="20" y="173" width="374" height="496"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time's Up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqa-12-VML">
+                                <rect key="frame" x="59" y="71" width="296" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bKP-ZL-rFC"/>
+                        <color key="backgroundColor" red="1" green="0.5490196078431373" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mWv-P4-cWS" firstAttribute="leading" secondItem="bKP-ZL-rFC" secondAttribute="leading" constant="20" id="5zd-28-klV"/>
+                            <constraint firstItem="bKP-ZL-rFC" firstAttribute="trailing" secondItem="mWv-P4-cWS" secondAttribute="trailing" constant="20" id="Eah-IL-t2W"/>
+                            <constraint firstItem="bKP-ZL-rFC" firstAttribute="bottom" secondItem="mWv-P4-cWS" secondAttribute="bottom" constant="193" id="H3Z-w2-EuH"/>
+                            <constraint firstItem="mWv-P4-cWS" firstAttribute="top" secondItem="bKP-ZL-rFC" secondAttribute="top" constant="129" id="M2S-yF-1we"/>
+                            <constraint firstItem="mWv-P4-cWS" firstAttribute="centerX" secondItem="K2U-3u-9XG" secondAttribute="centerX" id="Ruu-sp-RJG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CorrectionText" destination="mWv-P4-cWS" id="yP1-2g-fzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PyO-RV-HFB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="-516"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>

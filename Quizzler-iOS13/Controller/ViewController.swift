@@ -42,19 +42,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(step), userInfo: nil, repeats: false)
+        //        <-----Enhancement#2----->
+        //        second prograss bar, this one determines the time remaining before answer is counted as wrong. See step() below for more details.
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(step), userInfo: nil, repeats: true)
         
         updateUI()
     }
 
     @IBAction func BtnPressed(_ sender: UIButton) {
-        
-//        <-----Enhancement#2----->
-//        second prograss bar, this one determines the time remaining before answer is counted as wrong. See step() below for more details.
-
-        
-        
-        
         
     
         if brain.isCorrect(usrAns: sender.currentTitle!) {
@@ -105,6 +101,7 @@ class ViewController: UIViewController {
         TrueButton.backgroundColor = UIColor.clear
         Falsebutton.backgroundColor = UIColor.clear
     }
+    
     // Updates seconds remaining, progress bar and launches correction screen if time reaches zero
     @objc func step() {
         if timeRemaining > 0 {
