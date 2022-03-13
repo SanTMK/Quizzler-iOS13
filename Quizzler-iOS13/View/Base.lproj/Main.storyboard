@@ -211,7 +211,7 @@
         <!--Time's Up-->
         <scene sceneID="DHB-9Z-2Wu">
             <objects>
-                <viewController storyboardIdentifier="TimessUpVC" title="Time's Up" id="vFB-FV-Y8a" customClass="TimesUpViewController" customModule="Quizzler_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimesUpVC" title="Time's Up" id="vFB-FV-Y8a" customClass="TimesUpViewController" customModule="Quizzler_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2U-3u-9XG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,9 +240,6 @@
                             <constraint firstItem="mWv-P4-cWS" firstAttribute="centerX" secondItem="K2U-3u-9XG" secondAttribute="centerX" id="Ruu-sp-RJG"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="CorrectionText" destination="mWv-P4-cWS" id="yP1-2g-fzO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyO-RV-HFB" sceneMemberID="firstResponder"/>
             </objects>

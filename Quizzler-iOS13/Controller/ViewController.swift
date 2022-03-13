@@ -9,7 +9,7 @@
 
 // Enhancements:
 // #1 Added two screens: one for completion of the game with a perfect score, and a second one that displays the reason why an answer is wrong
-// #2 Added a time limit progress bar set to give the player a 10 second limit to answer or their attempt will be counted as wrong
+// #2 Added a time limit progress bar set to give the player a 60 second limit to answer all the questions or their attempt will be over.
 
 
 import UIKit
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
             
 //        <-----Enhancement #1----->
-//        Added new screen and sound effects if player gets all answers correct
+//        Added new screen if player gets all answers correct
 //        more on Brain.questions[].r struct and ../Model/VictoryScreenController.swift
             
 //            Incorrect answer brings up reasoning screen
@@ -111,14 +111,11 @@ class ViewController: UIViewController {
             timeRemaining = 10
             
             //Show Correction screen (copy-pasted from above)
-            let vc = storyboard?.instantiateViewController(withIdentifier: "CorrectionVC") as! CorrectionViewController
-            
-            correctionString = brain.questions[brain.turn].reasoning
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TimesUpVC") as! TimesUpViewController
+
             
             present(vc, animated: true)
             
-            brain.nextQuestion()
-            ProgressBar.progress = brain.getProgress()
             
             Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
             
