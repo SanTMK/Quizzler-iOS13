@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ProgressBar: UIProgressView!
 
     //Variables for time limit bar
-    var timeRemaining = 10
+    var timeRemaining = 60
     var timer: Timer!
     
     public var brain = Brain()
@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(step), userInfo: nil, repeats: false)
+        
         updateUI()
     }
 
@@ -48,7 +51,7 @@ class ViewController: UIViewController {
         
 //        <-----Enhancement#2----->
 //        second prograss bar, this one determines the time remaining before answer is counted as wrong. See step() below for more details.
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(step), userInfo: nil, repeats: true)
+
         
         
         
@@ -74,6 +77,8 @@ class ViewController: UIViewController {
 //        Check for perfect score
         if brain.score == brain.questions.count {
             
+            timer.invalidate()
+            
 //            call VictoryScreenController
             let vc = storyboard?.instantiateViewController(withIdentifier: "victoryVC") as! VictoryScreenController
             
@@ -89,12 +94,16 @@ class ViewController: UIViewController {
     }
     
     @objc func updateUI() {
-            QuestionText.text = brain.getQuestion()
+        QuestionText.text = brain.getQuestion()
+        
+        if QuestionText.text == brain.questions[0].quiz {
+            brain.score = 0
+        }
             
-            ScoreLabel.text = "Score: \(brain.score)"
+        ScoreLabel.text = "Score: \(brain.score)"
             
-            TrueButton.backgroundColor = UIColor.clear
-            Falsebutton.backgroundColor = UIColor.clear
+        TrueButton.backgroundColor = UIColor.clear
+        Falsebutton.backgroundColor = UIColor.clear
     }
     // Updates seconds remaining, progress bar and launches correction screen if time reaches zero
     @objc func step() {
@@ -120,7 +129,7 @@ class ViewController: UIViewController {
         }
         // update bar
         
-        TimeRemainingProgressBar.progress = Float(timeRemaining) / Float(10)
+        TimeRemainingProgressBar.progress = Float(timeRemaining) / Float(60)
         
     }
     
